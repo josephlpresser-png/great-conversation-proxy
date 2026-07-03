@@ -1,6 +1,17 @@
 export default async function handler(req, res) {
-  // Allow requests from your Squarespace domain
-  res.setHeader('Access-Control-Allow-Origin', 'https://www.joepresser.com');
+  const allowedOrigins = [
+    'https://www.joepresser.com',
+    'https://jpresser.itch.io',
+    'https://html.itch.zone'
+  ];
+
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', 'https://html.itch.zone');
+  }
+  
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
