@@ -3,7 +3,8 @@ export default async function handler(req, res) {
   'https://www.joepresser.com',
   'https://jpresser.itch.io',
   'https://html.itch.zone',
-  'https://clever-florentine-ae38bf.netlify.app'
+  'https://clever-florentine-ae38bf.netlify.app',
+  'https://unique-frangipane-d4cc47.netlify.app'
 ];
 
   const origin = req.headers.origin;
