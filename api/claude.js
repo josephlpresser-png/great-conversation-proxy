@@ -1,9 +1,10 @@
 export default async function handler(req, res) {
   const allowedOrigins = [
-    'https://www.joepresser.com',
-    'https://jpresser.itch.io',
-    'https://html.itch.zone'
-  ];
+  'https://www.joepresser.com',
+  'https://jpresser.itch.io',
+  'https://html.itch.zone',
+  'https://clever-florentine-ae38bf.netlify.app'
+];
 
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
