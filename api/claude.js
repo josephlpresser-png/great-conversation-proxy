@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   }
   
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, anthropic-version, x-api-key');
 
   if (req.method === 'OPTIONS') {
     res.status(200).end();
